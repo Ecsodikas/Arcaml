@@ -1,0 +1,3 @@
+(library
+ (name arcaml)
+ (public_name arcaml))

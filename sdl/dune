@@ -1,0 +1,3 @@
+(library
+ (name arcaml_sdl)
+ (libraries arcaml tsdl))
