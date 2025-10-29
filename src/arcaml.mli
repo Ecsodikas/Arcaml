@@ -2,6 +2,8 @@ type color = {r: int; g: int; b: int}
 
 type frame = color array array
 
+type draw_cmd = Text of {x: int; y: int; color: color; text: string}
+
 val empty_frame : int -> int -> frame
 
 val set_pixel : frame -> x:int -> y:int -> color -> frame
