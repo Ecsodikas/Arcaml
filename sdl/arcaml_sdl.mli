@@ -1,4 +1,5 @@
 open Arcaml
+module Sound = Arcaml_sound
 
 type renderer_t = {window: Tsdl.Sdl.window; renderer: Tsdl.Sdl.renderer}
 

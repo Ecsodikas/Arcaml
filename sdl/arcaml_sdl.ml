@@ -1,5 +1,6 @@
 open Tsdl
 open Tsdl_ttf
+module Sound = Arcaml_sound
 
 type renderer_t = {window: Sdl.window; renderer: Sdl.renderer}
 
@@ -114,7 +115,7 @@ let render_draw_cmd renderer font = function
             failwith e
       in
       let dst = Sdl.Rect.create ~x ~y ~w ~h in
-      ( match Sdl.render_copy renderer ~src:dst ~dst texture with
+      ( match Sdl.render_copy renderer ~dst texture with
       | Ok _ ->
           ()
       | Error (`Msg e) ->
